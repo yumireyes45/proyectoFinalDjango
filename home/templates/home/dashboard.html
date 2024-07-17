@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {% load static %}
+    <!--<link rel="stylesheet" href="{% static 'css/styles.css' %}">-->
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <main class="main-content">
+            <section class="statistics">
+                <!-- Aquí se incluirán los gráficos y estadísticas con Plotly -->
+                <div id="graphs">
+                    {% load plotly_dash %}
+                    {% plotly_header %}
+                    {% plotly_direct name='dashProyecto' %}
+                    {% plotly_footer %}
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
+
